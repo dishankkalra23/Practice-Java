@@ -7,23 +7,23 @@ public class BubbleSort {
         // Outer Loop
         while (j != n){
             // Inner loop
-            //boolean swap = false;
+            boolean swap = false;
             for (int i =0; i < n-1-j; i++){
                 if (arr[i] > arr[i+1]){
                     int temp = arr[i];
                     arr[i] = arr[i+1];
                     arr[i+1] = temp;
-              //      swap = true;
+                    swap = true;
                 }
             }
             j = (j + 1);
-            //if (swap == false){
-            //    break;}
+            if (!swap){     // swap == false
+                break;}
         }
     }
     // Display Method
     void display(int[] arr){
-        for (int i : arr) {
+        for (int i : arr) {     // for(i = 0,i < arr.length, i++)
             System.out.print(i + " ");
         }
     }
